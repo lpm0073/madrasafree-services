@@ -1,0 +1,10 @@
+---
+name: madarasa_plugin
+version: 0.1.0
+patches:
+    lms-env: |
+      "ADDL_INSTALLED_APPS": ["madrasafree_services"],
+      "ENABLE_COMBINED_LOGIN_REGISTRATION": true,
+      "REGISTRATION_EXTENSION_FORM": "madrasafree_services.forms.ExtraInfoForm"
+    cms-env: |
+      "ENABLE_COMBINED_LOGIN_REGISTRATION": true
