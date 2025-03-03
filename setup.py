@@ -5,7 +5,7 @@ Package metadata for madrasafree_services.
 import os
 import re
 import sys
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def get_version(*file_paths):
@@ -104,13 +104,10 @@ setup(
     version=VERSION,
     description="""Services that extends Open edX platform for madrasafree usage""",
     long_description=README + '\n\n' + CHANGELOG,
-    author='Ghassan',
-    author_email='oscm@edx.org',
-    url='https://github.com/edx/madrasafree-services',
-    packages=[
-        'madrasafree_services',
-        'madrasafree_services_plugin',
-    ],
+    author='Lawrence McDaniel',
+    author_email='lpm0073@gmailcom',
+    url='https://github.com/lpm0073/madrasafree-services',
+    packages=find_packages(),
     include_package_data=True,
     install_requires=load_requirements('requirements/base.in'),
     python_requires=">=3.8",
@@ -125,6 +122,8 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
     ],
     entry_points={
         "lms.djangoapp": [
