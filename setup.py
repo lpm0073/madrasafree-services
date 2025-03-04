@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 Package metadata for madrasafree_services.
 """

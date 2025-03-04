@@ -12,10 +12,12 @@ class ExtraInfo(models.Model):
     The form that wraps this model is in the forms.py file.
     """
     user = models.OneToOneField(USER_MODEL, null=True, default=None,on_delete=models.CASCADE)
-    support_is_donor = models.NullBooleanField(
+    support_is_donor = models.BooleanField(
+        null=True,
         default=None,
     )
-    support_is_periodical = models.NullBooleanField(
+    support_is_periodical = models.BooleanField(
+        null=True,
         default=None,
     )
     support_amount = models.DecimalField(
